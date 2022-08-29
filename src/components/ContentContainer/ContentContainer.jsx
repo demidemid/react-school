@@ -1,17 +1,17 @@
 import React from "react";
 import { Layout } from "antd";
-import { FeedList } from "./FeedList";
+import { FeedList } from "./FeedList/FeedList";
+import { ContentStyled, ContentPanelStyled } from "./ContentContainer.styles";
 
-const { Content } = Layout;
 
 export const ContentContainer = () => {
   return (
     <Layout>
-      <Content style={{ margin: "48px 16px 0" }}>
-        <div style={{ backgroundColor: `#fff`, padding: 48, height: `100%` }}>
+      <ContentStyled>
+        <ContentPanelStyled>
           <FeedList />
-        </div>
-      </Content>
+        </ContentPanelStyled>
+      </ContentStyled>
     </Layout>
   );
 };
